@@ -4,7 +4,6 @@ const cors = require("cors");
 const ObjectId = require("mongodb").ObjectId;
 require("dotenv").config();
 var admin = require("firebase-admin");
-const { query } = require("express");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -215,7 +214,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Travelo server is Running");
+  res.send("Time Zone server is Running");
 });
 
 app.listen(port, () => {
