@@ -1,6 +1,6 @@
 # Get the best treatment of any dental issues from us
 
-Check out the app [Time Zone]()
+Check out the app [Time Zone](https://time-zone-watch.web.app/)
 
 ## Features & Functionality of web site
 
