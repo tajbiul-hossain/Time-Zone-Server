@@ -176,8 +176,14 @@ async function run() {
     });
 
     app.put("/users", async (req, res) => {
-      const user = req.body;
-      user.role = "user";
+      let user = req.body;
+      const query = { email: user.email };
+      const oldUser = await usersCollection.findOne(query);
+      if (oldUser) {
+        user = oldUser;
+      } else {
+        user.role = "user";
+      }
       const filter = { email: user.email };
       const options = { upsert: true };
       const updateDoc = { $set: user };
